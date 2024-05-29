@@ -1,0 +1,44 @@
+.file {
+  margin-bottom: 30px;
+}
+
+.file h2 {
+  color: #FFE81F;
+  text-align: center;
+  font-size: 30px;
+  font-family: StarJediOutline;
+  text-transform: lowercase;
+  margin-top: 25px;
+}
+
+.file p, .file a {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: StarJediOutline;
+  text-transform: lowercase;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.file img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  max-width: 500px;
+}
+
+.file .paragraph {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: #FFE81F;
+  background-color: #000000;
+  text-transform: initial;
+  line-height: 1.5;
+  margin-top: 20px;
+  padding: 20px 5%;
+  border: #FFE81F solid 2px;
+  border-radius: 10px;
+}/*# sourceMappingURL=files.css.map */

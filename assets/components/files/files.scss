@@ -1,0 +1,109 @@
+///// MEDIA BREAKPOINTS////
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+
+///// COMMON USE MIXINS /////
+@mixin media($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin box-sizing($value){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+  @mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+  @mixin border-radius($value){
+    -moz-border-radius: $value;
+    -webkit--radius: $value;
+    border-radius: $value;
+}
+
+  @mixin background-size($value){
+    -o-background-size: $value;
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    background-size: $value;
+}
+///// PERSONAL MIXINS ///////
+@mixin size($h,$w){
+  height: $h;
+  width: $w;
+}
+@mixin centerBlock(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin spaceHorizontal($s){
+  margin-left: $s;
+  margin-right: $s;
+}
+@mixin spaceVertical($s){
+  margin-top: $s;
+  margin-bottom: $s;
+}
+
+@mixin starWarsDiv{
+  border: 2px solid $colorMain;
+  @include border-radius(10px);
+  background-color: #272727;
+  @include centerBlock();
+}
+///VAR///
+
+$colorMain: #FFE81F;
+
+
+///////////////////////////////
+.file{
+    margin-bottom: 30px;
+}
+
+.file h2{
+    color: $colorMain;
+    text-align: center;
+    font-size: 30px;
+    font-family: StarJediOutline;
+    text-transform: lowercase;
+    margin-top: 25px;
+}
+.file p, .file a{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: StarJediOutline;
+    text-transform: lowercase;
+    text-decoration: none;
+    margin-top: 10px
+}
+.file img{
+    @include centerBlock();
+    width: 95%;
+    max-width: 500px;
+}
+
+.file .paragraph{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #FFE81F;
+    background-color: #000000;
+    text-transform: initial;
+    line-height: 1.5;
+    margin-top: 20px;
+    padding: 20px 5%;
+    border: #FFE81F solid 2px;
+    border-radius: 10px;
+    }
