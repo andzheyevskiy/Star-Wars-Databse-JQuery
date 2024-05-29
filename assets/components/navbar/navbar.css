@@ -1,0 +1,102 @@
+.contenedorlogo {
+  margin-top: 20px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedorlogo img {
+  height: 100%;
+  width: 100%;
+}
+
+#mobile-menu {
+  border: 2px solid #FFE81F;
+  -moz-border-radius: 10px;
+  -webkit--radius: 10px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 54px;
+  width: 95%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 38px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+
+#mobile-menu:focus + #navbar {
+  display: flex;
+}
+
+#navbar {
+  width: 100%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#navbar:hover {
+  display: flex;
+}
+
+.buttons {
+  border: 2px solid #FFE81F;
+  -moz-border-radius: 10px;
+  -webkit--radius: 10px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 95%;
+  font-size: 32px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: #FFE81F;
+  font-family: StarJediOutline;
+  margin-bottom: 2px;
+}
+@media screen and (min-width: 768px) {
+  .buttons {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .buttons {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=navbar.css.map */

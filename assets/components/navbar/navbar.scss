@@ -1,0 +1,137 @@
+///// MEDIA BREAKPOINTS////
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+
+///// COMMON USE MIXINS /////
+@mixin media($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin box-sizing($value){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+  @mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+  @mixin border-radius($value){
+    -moz-border-radius: $value;
+    -webkit--radius: $value;
+    border-radius: $value;
+}
+
+  @mixin background-size($value){
+    -o-background-size: $value;
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    background-size: $value;
+}
+///// PERSONAL MIXINS ///////
+@mixin size($h,$w){
+  height: $h;
+  width: $w;
+}
+@mixin centerBlock(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin spaceHorizontal($s){
+  margin-left: $s;
+  margin-right: $s;
+}
+@mixin spaceVertical($s){
+  margin-top: $s;
+  margin-bottom: $s;
+}
+
+@mixin starWarsDiv{
+  border: 2px solid $colorMain;
+  @include border-radius(10px);
+  background-color: #1f1f1f;
+  @include centerBlock();
+}
+
+///VAR///
+  
+$colorMain: #FFE81F;
+
+///// CSS /////
+
+
+.contenedorlogo{
+  margin-top: 20px;
+  width: 300px;
+ @include centerBlock;
+}
+.contenedorlogo img{
+  @include size(100%,100% );
+}
+#mobile-menu {
+  @include starWarsDiv();
+  @include size(54px,95% );
+  @include spaceVertical(20px);
+  color: white;
+  font-size: 38px; 
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  @include media($md){
+    display: none;
+  }
+}
+#mobile-menu:focus + #navbar{
+  display: flex;
+}
+#navbar{
+  width: 100%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include media($md){
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    @include spaceVertical(20px);
+  }
+}
+#navbar:hover{
+    display: flex;
+}
+.buttons{
+  @include starWarsDiv();
+  @include size(40px,95% );
+  font-size: 32px; 
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: $colorMain;
+  font-family: StarJediOutline;
+  margin-bottom: 2px;
+  @include media($md){ 
+    @include spaceHorizontal(0.5%);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 25px;
+  }
+  @include media($lg){
+    font-size: 32px;
+  }
+}
