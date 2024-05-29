@@ -1,0 +1,34 @@
+{
+        "mainpage":{
+            "components":["./assets/components/navbar/navbar.js","./assets/components/mainpage/mainpage.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/mainpage/mainpage.css"]
+        },
+        "search":{
+            "components":["./assets/components/navbar/navbar.js","./assets/components/search/search.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/search/search.css"]
+        },
+        "films":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/films.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        },
+        "people":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/people.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        },
+        "planets":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/planets.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        },
+        "species":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/species.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        },
+        "starships":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/starships.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        },
+        "vehicles":{
+            "components":["./assets/components/navbar/navbar.js","./assets/modules/appendArray.js","./assets/components/files/vehicles.js"],
+            "styles": ["./assets/css/styles.css", "./assets/components/navbar/navbar.css","./assets/components/files/files.css"]
+        }
+}
