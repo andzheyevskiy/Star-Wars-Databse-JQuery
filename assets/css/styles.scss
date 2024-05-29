@@ -1,0 +1,89 @@
+///// MEDIA BREAKPOINTS////
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+
+///// COMMON USE MIXINS /////
+@mixin media($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin box-sizing($value){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+  @mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+  @mixin border-radius($value){
+    -moz-border-radius: $value;
+    -webkit--radius: $value;
+    border-radius: $value;
+}
+
+  @mixin background-size($value){
+    -o-background-size: $value;
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    background-size: $value;
+}
+///// PERSONAL MIXINS ///////
+@mixin size($h,$w){
+  height: $h;
+  width: $w;
+}
+@mixin centerBlock(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin spaceHorizontal($s){
+  margin-left: $s;
+  margin-right: $s;
+}
+@mixin spaceVertical($s){
+  margin-top: $s;
+  margin-bottom: $s;
+}
+
+@mixin starWarsDiv{
+  border: 2px solid $colorMain;
+  @include border-radius(10px);
+  background-color: #272727;
+  @include centerBlock();
+}
+///// FONTS //////
+@font-face {
+  font-family: "StarJediOutline";
+  src: url(../fonts/Starjout.ttf);
+}
+
+///VAR///
+
+$colorMain: #FFE81F;
+
+///// CSS /////
+
+*{
+  text-transform: capitalize;
+}
+
+body{
+  background-image: url(https://andzheyevskiy.github.io/SWDB/assets/img/background.jpg);
+}
+#field{
+  @include starWarsDiv();
+  margin-bottom: 20px;
+  width: 95%;
+  min-height: 500px;
+  background-color: rgba(39, 39, 39, 0.5);
+}
