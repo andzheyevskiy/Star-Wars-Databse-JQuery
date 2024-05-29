@@ -1,0 +1,123 @@
+///// MEDIA BREAKPOINTS////
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+
+///// COMMON USE MIXINS /////
+@mixin media($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin box-sizing($value){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+  @mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+  @mixin border-radius($value){
+    -moz-border-radius: $value;
+    -webkit--radius: $value;
+    border-radius: $value;
+}
+
+  @mixin background-size($value){
+    -o-background-size: $value;
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    background-size: $value;
+}
+///// PERSONAL MIXINS ///////
+@mixin size($h,$w){
+  height: $h;
+  width: $w;
+}
+@mixin centerBlock(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin spaceHorizontal($s){
+  margin-left: $s;
+  margin-right: $s;
+}
+@mixin spaceVertical($s){
+  margin-top: $s;
+  margin-bottom: $s;
+}
+
+@mixin starWarsDiv{
+  border: 2px solid $colorMain;
+  @include border-radius(10px);
+  background-color: #272727;
+  @include centerBlock();
+}
+///// FONTS //////
+
+///VAR///
+
+$colorMain: #FFE81F;
+
+///// CSS /////
+
+
+#resultWrapper{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  @include media($md){
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+}
+
+.searchContent{
+  width: 90%;
+  aspect-ratio: 1/1;
+  font-family: StarJediOutline;
+  color: $colorMain;
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  text-transform: lowercase;
+  margin-bottom: 5%;
+  @include media($md){
+    width: 48%;
+  }
+  @include media($lg){
+    width: 32%;
+  }
+
+}
+.searchContent img{
+  @include starWarsDiv();
+  width: 90%;
+  aspect-ratio: 1/1;
+}
+
+#next-previous{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#next-previous a{
+  font-family: StarJediOutline;
+  font-size: 32px;
+  color: $colorMain;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 20px;
+}
